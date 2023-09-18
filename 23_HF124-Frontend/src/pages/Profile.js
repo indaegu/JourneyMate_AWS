@@ -8,7 +8,7 @@ import ProfileDetail from "./ProfileDetail";
 import { SocketContext } from "../App";
 import bcrypt from "bcryptjs";
 
-const baseURL = "http://localhost:3000/";
+const baseURL = "https://api.journeymate.link/";
 const imgURL = "https://journeymate.s3.ap-northeast-2.amazonaws.com/";
 const Profile = () => {
   const navigate = useNavigate();

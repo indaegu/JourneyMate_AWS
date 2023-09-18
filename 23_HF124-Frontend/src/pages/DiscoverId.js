@@ -11,7 +11,7 @@ const DiscoverId = () => {
   const sendVerificationCode = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:3000/users/finduser",
+        "https://api.journeymate.link/users/finduser",
         {
           email: email,
         }

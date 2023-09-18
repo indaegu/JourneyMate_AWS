@@ -25,7 +25,7 @@ const Community_Detail = () => {
     }
   };
   console.log(data)
-  const baseURL = "http://localhost:3000/";
+  const baseURL = "https://api.journeymate.link/";
   const imgURL = "https://journeymate.s3.ap-northeast-2.amazonaws.com/";
   function openModal() {
     setIsModalOpen(true);

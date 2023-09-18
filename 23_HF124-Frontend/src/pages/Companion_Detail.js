@@ -22,7 +22,7 @@ const Companion_Detail = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { socket, socketId } = useContext(SocketContext);
 
-  const baseURL = "http://localhost:3000/";
+  const baseURL = "https://api.journeymate.link/";
   const imgURL = "https://journeymate.s3.ap-northeast-2.amazonaws.com/";
   function openModal() {
     setIsModalOpen(true);
@@ -121,7 +121,7 @@ const Companion_Detail = () => {
   const deleteCompanion = async () => {
     const postID = window.location.pathname.split("/").pop();
     try {
-      await axios.delete(`http://localhost:3000/companion/${postID}`);
+      await axios.delete(`https://api.journeymate.link/companion/${postID}`);
       navigate(-1);
     } catch (error) {
       console.log(error);

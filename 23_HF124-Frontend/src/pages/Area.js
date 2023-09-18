@@ -4,7 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./Area.css"; // Importing the CSS
 
-const baseURL="http://localhost:3000/";
+const baseURL="https://api.journeymate.link/";
 function AddressForm() {
   const [addressInput, setAddressInput] = useState("");
   const [addressList, setAddressList] = useState([]);

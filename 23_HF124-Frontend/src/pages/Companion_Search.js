@@ -9,7 +9,7 @@ import "react-datepicker/dist/react-datepicker.css"; // 필요한 CSS
 
 axios.defaults.withCredentials = true;
 
-const baseURL = "http://localhost:3000/";
+const baseURL = "https://api.journeymate.link/";
 
 const Companion_Search = () => {
   const navigate = useNavigate();

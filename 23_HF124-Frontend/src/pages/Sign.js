@@ -101,7 +101,7 @@ const Sign = () => {
   const checkUserIDAvailability = async () => {
     try {
       const response = await fetch(
-        "http://localhost:3000/signup/check-userID",
+        "https://api.journeymate.link/signup/check-userID",
         {
           method: "POST",
           headers: {
@@ -157,7 +157,7 @@ const Sign = () => {
 
     try {
       // POST request to /signup endpoint with form data
-      const response = await fetch("http://localhost:3000/signup/part1", {
+      const response = await fetch("https://api.journeymate.link/signup/part1", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -190,7 +190,7 @@ const Sign = () => {
   const sendVerificationCode = async () => {
     try {
       const response = await fetch(
-        "http://localhost:3000/signup/email-verification",
+        "https://api.journeymate.link/signup/email-verification",
         {
           method: "POST",
           body: JSON.stringify({ email }),

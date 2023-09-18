@@ -17,7 +17,7 @@ const Companion_Write = () => {
   const [tagItem, setTagItem] = useState(""); // 태그 입력값
   const [tagList, setTagList] = useState([]); // 태그 리스트
   const detaildata = useLocation();
-  const baseURL = "http://localhost:3000/";
+  const baseURL = "https://api.journeymate.link/";
   const imgURL = "https://journeymate.s3.ap-northeast-2.amazonaws.com/";
   const navigate = useNavigate();
   const [locationList, setLocationList] = useState([]);

@@ -72,7 +72,7 @@ server.listen(port, () => {
 
 // const io = socketio(server, {
 //   cors: {
-//     origin: "http://localhost:3001",
+//     origin: "https://journeymate.link",
 //     // methods: ["GET", "POST"], // 초기 연결할때 handshake용
 //     credentials: true,
 //   },

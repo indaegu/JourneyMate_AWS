@@ -2,7 +2,7 @@
   "name": "journeymate",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3000",
+  "proxy": "https://api.journeymate.link/",
   "dependencies": {
     "@ffmpeg/ffmpeg": "^0.12.6",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",

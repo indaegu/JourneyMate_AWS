@@ -7,7 +7,7 @@ import Input from "./Input";
 import Messages from "./Messages";
 import TextContainer from "./TextContainer";
 
-const ENDPOINT = 'http://localhost:3000'
+const ENDPOINT = 'https://api.journeymate.link/'
 
 let socket;
 

@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faScroll } from "@fortawesome/free-solid-svg-icons";
-const baseURL = "http://localhost:3000/";
+const baseURL = "https://api.journeymate.link/";
 const imgURL = "https://journeymate.s3.ap-northeast-2.amazonaws.com/";
 const Scrap = () => {
   const [scrapedPosts, setScrapedPosts] = useState([]); // "수정!!Koo"

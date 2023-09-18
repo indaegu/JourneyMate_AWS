@@ -38,7 +38,7 @@ import HomeF from "./pages/HomeF";
 // import {socket,SOCKET_EVENT,SocketContext} from "./components/Chatting/Chat";
 import io from "socket.io-client";
 
-const ENDPOINT = "http://localhost:3000";
+const ENDPOINT = "https://api.journeymate.link/";
 const imgURL = "https://journeymate.s3.ap-northeast-2.amazonaws.com/";
 
 export const SocketContext = createContext();

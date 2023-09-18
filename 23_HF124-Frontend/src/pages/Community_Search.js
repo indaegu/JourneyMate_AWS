@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass,faFilter } from "@fortawesome/free-solid-svg-icons";
 
 axios.defaults.withCredentials = true;
-const baseURL = "http://localhost:3000/";
+const baseURL = "https://api.journeymate.link/";
 const Community_Search = () => {
   const navigate = useNavigate();
   const [posts, setPosts] = useState([]);

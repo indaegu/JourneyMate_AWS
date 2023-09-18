@@ -9,7 +9,7 @@ import { SocketContext } from "../App";
 import ChattingMessage from "./ChattingMessage";
 
 
-const baseURL = "http://localhost:3000/";
+const baseURL = "https://api.journeymate.link/";
 const imgURL = "https://journeymate.s3.ap-northeast-2.amazonaws.com/";
 const ChattingRoom = () => {
   let lastDate=""

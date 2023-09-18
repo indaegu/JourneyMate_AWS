@@ -8,7 +8,7 @@ module.exports = {
   init: (httpServer) => {
     io = require('socket.io')(httpServer, { 
       cors: {
-          origin: "http://localhost:3001",
+          origin: "https://journeymate.link",
           methods: ["GET", "POST"], // 초기 연결할때 handshake용
           credentials: true,
         }, });

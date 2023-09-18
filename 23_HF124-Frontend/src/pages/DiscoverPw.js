@@ -12,7 +12,7 @@ const DiscoverId = () => {
   const sendVerificationCode = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:3000/users/findpassword",
+        "https://api.journeymate.link/users/findpassword",
         {
           userID: id,
           email: email,
