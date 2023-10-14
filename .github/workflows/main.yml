@@ -13,10 +13,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: 16.15.1
         
       - name: Set up SSH key
         run: |
@@ -42,9 +41,6 @@ jobs:
       - name: Deploy Backend
         run: |
           ssh -o StrictHostKeyChecking=no -i "SCM.pem" ubuntu@13.124.185.83 <<EOF
-          export NVM_DIR="$HOME/.nvm"
-          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-          nvm use 16.15.1
           cd ~/23_HF124/23_HF124-Backend
           npm install
           npm start &
@@ -54,9 +50,6 @@ jobs:
       - name: Deploy Frontend
         run: |
           ssh -o StrictHostKeyChecking=no -i "SCM.pem" ubuntu@13.124.185.83 <<EOF
-          export NVM_DIR="$HOME/.nvm"
-          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-          nvm use 16.15.1
           cd ~/23_HF124/23_HF124-Frontend
           npm install
           npm start &
