@@ -25,10 +25,19 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-northeast-2  # 서울 서버로 변경
 
+
+
+      - name: Pull github
+        run: |
+          ssh -o StrictHostKeyChecking=no -i "SCM.pem" ubuntu@13.124.185.83 <<EOF
+          cd ~/23_HF124
+          git pull github main
+          EOF
+
       - name: Deploy Backend
         run: |
           ssh -o StrictHostKeyChecking=no -i "SCM.pem" ubuntu@13.124.185.83 <<EOF
-          cd ~/JourneyMate_AWS/23_HF124-Backend
+          cd ~/23_HF124/23_HF124-Backend
           npm install
           npm start &
           sleep 20
@@ -38,7 +47,11 @@ jobs:
       - name: Deploy Frontend
         run: |
           ssh -o StrictHostKeyChecking=no -i "SCM.pem" ubuntu@13.124.185.83 <<EOF
-          cd ~/JourneyMate_AWS/23_HF124-Frontend
+          cd ~/23_HF124/23_HF124-Frontend
           npm install
           npm start &
           EOF
+
+
+
+      
