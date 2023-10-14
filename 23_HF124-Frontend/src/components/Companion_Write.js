@@ -478,7 +478,7 @@ const Companion_Write = () => {
                     onChange={onFileInput}
                   />
                   <UploadButton type="submit">
-                    <p className="text1"> 사진 올리기 </p>
+                    <p className="text1"> 사진 올리기  </p>
                     <p className="text2"> (1장) </p>
                   </UploadButton>
                 </Upload>
@@ -486,7 +486,7 @@ const Companion_Write = () => {
             </PhotoContainer>
           ) : (
             <Preview>
-              <ProfilePreview src={previewURL} alt="uploaded" ref={fileInput} />
+              <ProfilePreview src={imgURL+previewURL} alt="uploaded" ref={fileInput} />
               <EditButton onClick={() => handleEdit()}> 사진수정 </EditButton>
             </Preview>
           )}
