@@ -27,7 +27,7 @@ jobs:
 
       - name: Deploy Backend
         run: |
-          ssh -i "SCM.pem" ubuntu@13.124.185.83 <<EOF
+          ssh -o StrictHostKeyChecking=no -i "SCM.pem" ubuntu@13.124.185.83 <<EOF
           cd ~/JourneyMate_AWS/23_HF124-Backend
           npm install
           npm start &
@@ -37,7 +37,7 @@ jobs:
 
       - name: Deploy Frontend
         run: |
-          ssh -i "SCM.pem" ubuntu@13.124.185.83 <<EOF
+          ssh -o StrictHostKeyChecking=no -i "SCM.pem" ubuntu@13.124.185.83 <<EOF
           cd ~/JourneyMate_AWS/23_HF124-Frontend
           npm install
           npm start &
