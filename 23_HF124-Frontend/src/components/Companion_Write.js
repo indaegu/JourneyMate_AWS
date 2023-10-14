@@ -283,7 +283,7 @@ const Companion_Write = () => {
   };
 
   useEffect(() => {
-    //모집날짜 현재날짜보다 전이면 선택 못 하게함.
+    //모집날짜 현재날짜보다 전이면 선택 못 하게함 .
     const today = new Date();
     const dateString = `${today.getFullYear()}-${String(
       today.getMonth() + 1
