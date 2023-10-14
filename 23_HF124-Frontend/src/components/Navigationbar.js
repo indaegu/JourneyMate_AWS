@@ -48,7 +48,7 @@ const Navigationbar = () => {
               size="2x"
               color={(activeTab === "Community" || activeTab ==="Companion") ? "#F97800" : "black"}
             />
-            <Text active={activeTab === "Community" || activeTab ==="Companion"}>커뮤니티//동행인</Text>
+            <Text active={activeTab === "Community" || activeTab ==="Companion"}>커뮤니티//@동행인</Text>
           </NavBox>
 
           <NavBox onClick={() => handleTabClick("Home")}>
