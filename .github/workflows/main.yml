@@ -26,10 +26,8 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }} #변경
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-northeast-2  # 서울 서버로 변경
-
-
 
       - name: Pull github
         run: |
@@ -41,22 +39,19 @@ jobs:
       - name: Deploy Backend
         run: |
           ssh -o StrictHostKeyChecking=no -i "SCM.pem" ubuntu@13.124.185.83 <<EOF
+          source /home/ubuntu/.nvm/nvm.sh
           nvm use 16.15.1
           cd ~/23_HF124/23_HF124-Backend
           npm install
           npm start &
           EOF
           
-
       - name: Deploy Frontend
         run: |
           ssh -o StrictHostKeyChecking=no -i "SCM.pem" ubuntu@13.124.185.83 <<EOF
+          source /home/ubuntu/.nvm/nvm.sh
           nvm use 16.15.1
           cd ~/23_HF124/23_HF124-Frontend
           npm install
           npm start &
           EOF
-
-
-
-      
