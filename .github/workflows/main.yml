@@ -41,6 +41,7 @@ jobs:
       - name: Deploy Backend
         run: |
           ssh -o StrictHostKeyChecking=no -i "SCM.pem" ubuntu@13.124.185.83 <<EOF
+          nvm use 16.15.1
           cd ~/23_HF124/23_HF124-Backend
           npm install
           npm start &
@@ -50,6 +51,7 @@ jobs:
       - name: Deploy Frontend
         run: |
           ssh -o StrictHostKeyChecking=no -i "SCM.pem" ubuntu@13.124.185.83 <<EOF
+          nvm use 16.15.1
           cd ~/23_HF124/23_HF124-Frontend
           npm install
           npm start &
