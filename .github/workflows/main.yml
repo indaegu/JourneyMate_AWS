@@ -43,8 +43,7 @@ jobs:
           nvm use 16.15.1
           cd ~/23_HF124/23_HF124-Backend
           npm install
-          nohup npm start &> backend.log &
-          disown
+          screen -dmS backend npm start
           EOF
           
       - name: Deploy Frontend
@@ -54,7 +53,7 @@ jobs:
           nvm use 16.15.1
           cd ~/23_HF124/23_HF124-Frontend
           npm install
-          nohup npm start &> frontend.log &
-          disown
+          screen -dmS frontend npm start
           EOF
+
 
