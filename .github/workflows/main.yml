@@ -44,7 +44,7 @@ jobs:
           ssh -o StrictHostKeyChecking=no -i "SCM.pem" ubuntu@13.124.185.83 <<EOF
           cd ~/23_HF124/23_HF124-Backend
           /home/ubuntu/.nvm/versions/node/v16.15.1/bin/npm install
-          npm start &
+          /home/ubuntu/.nvm/versions/node/v16.15.1/bin/npm start &
           EOF
           
 
@@ -53,7 +53,7 @@ jobs:
           ssh -o StrictHostKeyChecking=no -i "SCM.pem" ubuntu@13.124.185.83 <<EOF
           cd ~/23_HF124/23_HF124-Frontend
           /home/ubuntu/.nvm/versions/node/v16.15.1/bin/npm install
-          npm start &
+          /home/ubuntu/.nvm/versions/node/v16.15.1/bin/npm start &
           EOF
 
 
